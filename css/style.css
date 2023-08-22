@@ -61,8 +61,18 @@ main{
 
 /* bx_list */
 .bx_list{
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
-    width: 100%; max-width: 800px; margin-top: 52px;
+    position: relative;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 14px;
+    width: 100%; max-width: 800px; padding-top: 82px;
+}
+.bx_list:before{
+    position: absolute; top: 38px;
+    width: 100%; content: attr(title); text-align: center;
+}
+.bx_list::after{
+    position: absolute; top: 68px; left: 0; right: 0; 
+    width: 20px; height: 2px; margin: 0 auto; background: #fff;
+    content: '';
 }
 .bx_list a{ 
     position: relative;
